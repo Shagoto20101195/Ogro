@@ -3,5 +3,19 @@
     padding: 50px;
     text-align: center;
     font-size: larger;
-    position: sticky;
+}
+
+.middle-section {
+    background-color: white;
+    padding: 500px;
+}
+
+.bottom-section {
+    background-color: darksalmon;
+    padding: 30px;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
 }
