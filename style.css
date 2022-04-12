@@ -7,13 +7,26 @@
 
 .middle-section {
     background-color: white;
-    padding: 500px;
+    padding: 300px;
 }
 
 .bottom-section {
     background-color: darksalmon;
     padding: 30px;
     text-align: center;
+}
+
+.logins {
+    background-color: darksalmon;
+    border: 2px solid black;
+    padding: 30px;
+    text-align: center;
+    font-size: larger;
+}
+
+.logins:hover {
+    color: white;
+    cursor: pointer;
 }
 
 html {
