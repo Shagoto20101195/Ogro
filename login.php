@@ -1,3 +1,7 @@
+<?php
+    require_once("dbconnection.php");
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
