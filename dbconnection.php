@@ -11,6 +11,6 @@
         die("Failed to connect with database.");
     }
     else{
-        //echo("Success!");
+        // echo("Success!");
     }
 ?>
