@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" href="images/Tom_evil_smile.jpg">
         <title>Orgo - Login</title>
     </head>
     <body>
