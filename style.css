@@ -52,6 +52,16 @@
     color: white;
 }
 
+.home-logout {
+    color: black;
+    text-decoration: underline;
+}
+
+.home-logout:hover {
+    color: white;
+    
+}
+
 html {
     scroll-behavior: smooth;
 }

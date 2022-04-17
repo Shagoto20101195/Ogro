@@ -12,7 +12,7 @@
 
             if(mysqli_num_rows($result) == 1)
             {
-                $_SESSION['userid'] = mysqli_fetch_assoc($result);
+                $_SESSION['a_id'] = mysqli_fetch_assoc($result);
                 header("Location: admin_homepage.php");
                 die;
             }
@@ -67,9 +67,9 @@
         <footer>
             <div class="bottom-section">
                 <p>&copy; Unknown</p>
-                <span><a href="#">Back To Top</a></span>
+                <span><a href="#" class="home-logout">Back To Top</a></span>
                 |
-                <span><a href="index.html">Back To Home</a></span>
+                <span><a href="index.html" class="home-logout">Back To Home</a></span>
             </div>
         </footer>
     </body>
