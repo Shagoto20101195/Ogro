@@ -1,5 +1,5 @@
 .top-section {
-    background-color: rgb(31, 158, 31);
+    background-color: darksalmon;
     padding: 50px;
     text-align: center;
     font-size: larger;
@@ -17,14 +17,14 @@
 }
 
 .bottom-section {
-    background-color: darkgreen;
+    background-color: darksalmon;
     padding: 30px;
     text-align: center;
     display: block;
 }
 
 .logins{  
-    background-color: greenyellow;
+    background-color: darksalmon;
     color: black;
     border: 1px solid black;
     text-align: center;
@@ -35,8 +35,20 @@
     padding: 30px;
 }
 
-.logins:hover{
-    background-color: green;
+.login-button {
+    background-color: darksalmon;
+    border-radius: 2px;
+    color: black;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.logins:hover, .login-button:hover{
+    background-color: brown;
     color: white;
 }
 
