@@ -4,30 +4,47 @@
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
-        $a_id = $_POST['userid'];
-        if(str_starts_with($a_id, "A"))
+        $userid = $_POST['userid'];
+        if(str_starts_with($userid, "A"))
         {
-            $query = "select * from admin where a_id = '$a_id'";
+            $query = "select * from admin where a_id = '$userid'";
             $result = mysqli_query($connect, $query);
 
             if(mysqli_num_rows($result) == 1)
             {
-                $_SESSION['a_id'] = mysqli_fetch_assoc($result);
+                $_SESSION['userid'] = mysqli_fetch_assoc($result);
                 header("Location: admin_homepage.php");
                 die;
             }
         }
-        elseif(str_starts_with($a_id, "C"))
+        elseif(str_starts_with($userid, "C"))
         {
+            $query = "select * from customer where c_id = '$userid'";
+            $result = mysqli_query($connect, $query);
 
+            if(mysqli_num_rows($result) == 1)
+            {
+                $_SESSION['userid'] = mysqli_fetch_assoc($result);
+                header("Location: customer_homepage.php");
+                die;
+            }
         }
-        elseif(str_starts_with($a_id, "S"))
+        elseif(str_starts_with($userid, "S"))
         {
+            $query = "select * from seller where s_id = '$userid'";
+            $result = mysqli_query($connect, $query);
 
+            if(mysqli_num_rows($result) == 1)
+            {
+                $_SESSION['userid'] = mysqli_fetch_assoc($result);
+                header("Location: seller_homepage.php");
+                die;
+            }
         }
         else
         {
             echo("Invalid User!");
+            die;
         }
     }
 ?>
