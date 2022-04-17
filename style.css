@@ -1,5 +1,5 @@
 .top-section {
-    background-color: darkgreen;
+    background-color: darkseagreen;
     padding: 50px;
     text-align: center;
     font-size: larger;
@@ -17,14 +17,14 @@
 }
 
 .bottom-section {
-    background-color: darksalmon;
+    background-color: darkseagreen;
     padding: 30px;
     text-align: center;
     display: block;
 }
 
 .logins{  
-    background-color: darksalmon;
+    background-color: greenyellow;
     color: black;
     border: 1px solid black;
     text-align: center;
@@ -36,7 +36,7 @@
 }
 
 .login-button {
-    background-color: darksalmon;
+    background-color:  greenyellow;
     border-radius: 2px;
     color: black;
     padding: 20px;
@@ -48,7 +48,7 @@
 }
 
 .logins:hover, .login-button:hover{
-    background-color: brown;
+    background-color: green;
     color: white;
 }
 
