@@ -35,7 +35,19 @@
     padding: 30px;
 }
 
-.logins:hover{
+.login-button {
+    background-color: darksalmon;
+    border-radius: 2px;
+    color: black;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.logins:hover, .login-button:hover{
     background-color: brown;
     color: white;
 }
