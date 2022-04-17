@@ -3,31 +3,36 @@
     padding: 50px;
     text-align: center;
     font-size: larger;
+    display: block;
 }
 
 .middle-section {
     background-color: white;
-    padding: 300px;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 .bottom-section {
     background-color: darksalmon;
     padding: 30px;
     text-align: center;
+    display: block;
 }
 
-.logins{
-    background-color: cyan;
+.logins{  
+    background-color: darksalmon;
     color: black;
-    border: 2px solid black;
+    border: 1px solid black;
     text-align: center;
     word-wrap: break-word;
     font-size: larger;
     text-decoration: none;
-    display: inline-block;
-    width: 700px;
+    width: 5000px;
     padding: 30px;
-    
 }
 
 .logins:hover{
