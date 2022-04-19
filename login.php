@@ -73,7 +73,7 @@
                 <div>
                     <form method="post">
                         <label for="userid"><h1>Please enter your user ID:</h1></label>
-                        <input type="text" id="userid" name="userid" minlength="7" maxlength="7" size="100%" placeholder="e.g. A-12345, S-09876, C-13579" required>
+                        <input type="text" id="userid" name="userid" minlength="7" maxlength="7" size="100%" placeholder="e.g. A-12345, S-09876, C-13579" style="padding: 10px;" required>
                         <br> <br>
                         <input type="submit" class="login-button" value="Login">
                     </form>
