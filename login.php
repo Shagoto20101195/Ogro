@@ -12,7 +12,7 @@
 
             if(mysqli_num_rows($result) == 1)
             {
-                $_SESSION['userid'] = mysqli_fetch_assoc($result);
+                $_SESSION['user'] = mysqli_fetch_assoc($result);
                 header("Location: admin_homepage.php");
                 die;
             }
