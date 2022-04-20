@@ -2,9 +2,6 @@
     session_start();
 
     include("dbconnection.php");
-    //$query = "select * from admin";
-    //$result = mysqli_query($connect, $query);
-    //echo($result);
 ?>
 
 <!DOCTYPE html>
