@@ -31,7 +31,7 @@
 
         <main>
             <div class="middle-section">
-                <h1>Welcome <?php echo($_SESSION['a_id']);?></h1>
+                <h1>Welcome <?php echo($_SESSION['user']['name']);?></h1>
             </div>
         </main>
 

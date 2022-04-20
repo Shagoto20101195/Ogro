@@ -2,9 +2,6 @@
     session_start();
 
     include("dbconnection.php");
-    //$query = "select * from admin";
-    //$result = mysqli_query($connect, $query);
-    //echo($result);
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +28,7 @@
 
         <main>
             <div class="middle-section">
-                <h1>Welcome <?php echo($_SESSION['a_id']);?></h1>
+                <h1>Welcome <?php echo($_SESSION['user']['name']);?></h1>
             </div>
         </main>
 

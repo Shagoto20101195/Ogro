@@ -24,7 +24,7 @@
 
             if(mysqli_num_rows($result) == 1)
             {
-                $_SESSION['userid'] = mysqli_fetch_assoc($result);
+                $_SESSION['user'] = mysqli_fetch_assoc($result);
                 header("Location: customer_homepage.php");
                 die;
             }
@@ -36,7 +36,7 @@
 
             if(mysqli_num_rows($result) == 1)
             {
-                $_SESSION['userid'] = mysqli_fetch_assoc($result);
+                $_SESSION['user'] = mysqli_fetch_assoc($result);
                 header("Location: seller_homepage.php");
                 die;
             }

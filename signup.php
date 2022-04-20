@@ -1,28 +1,35 @@
 <?php
     session_start();
+    include("generator.php");
     include("dbconnection.php");
-
-    function gen_id($res)
-    {
-        $checker = true;
-    }
 
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         $role = $_POST['role'];
         $name = $_POST['name'];
-        $count = $_POST['count'];
         $address = $_POST['address'];
         $phone = $_POST['phone'];
 
-        if($phone === "")
+        if($role == "S")
         {
-            $phone = null;
+            $id = gen_id("S-", $connect);
+            $query = "insert into seller values ('$name', '$id', '$address', 0)";
+            mysqli_query($connect, $query);
+            $query = "select * from seller where s_id = '$id'";
+            $result = mysqli_query($connect, $query);
+            $_SESSION['user'] = mysqli_fetch_assoc($result);
+            header("Location: signup_success_s.php");
         }
-
-
-
-        
+        else
+        {
+            $id = gen_id("C-", $connect);
+            $query = "insert into customer values ('$name', '$id', '$phone', '$address', 0)";
+            mysqli_query($connect, $query);
+            $query = "select * from customer where c_id = '$id'";
+            $result = mysqli_query($connect, $query);
+            $_SESSION['user'] = mysqli_fetch_assoc($result);
+            header("Location: signup_success_c.php");
+        }
     }
 ?>
 
@@ -46,7 +53,7 @@
 
     <main>
         <div class="middle-section">
-            <form action="signup.php">
+            <form method="post">
                 <label for="role"><h1>Select role:</h1></label>
                 <select name="role" id="role" style="padding: 10px;">
                     <option value="S">Seller</option>
@@ -64,10 +71,6 @@
 
                 <label for="phone"><h1>Your phone number:<h3>(will be empty if not given)</h3></h1></label>
                 <input type="text" id="phone" name="phone" size="100%" maxlength="11" placeholder="e.g. 01234543210" style="padding: 10px;">
-                <br> <br>
-
-                <label for="count"><h1>Your sales/purchase count:<h3>(will be zero if not given)</h3></h1></label>
-                <input type="number" id="count" name="count" size="100%" min="0" style="padding: 10px;">
                 <br> <br>
 
                 <input type="submit" class="login-button" value="Register">
