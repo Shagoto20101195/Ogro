@@ -24,11 +24,11 @@
     <main>
         <div class="middle-section">
             <div>
-                <h1 style="text-align: center;">Dear user, your signup was successful and unique id is: <?php
+                <h1 style="text-align: center;">Dear user, your signup was successful and unique user ID is: <?php
                     echo($_SESSION['user']['s_id']);
                     unset($_SESSION['user']);
                 ?></h1>
-                <h1 style="text-align: center;">Please use your this id to login anytime and make sure you do not forget it!</h1>
+                <h1 style="text-align: center;">Please use this ID to login anytime and make sure you do not forget it!</h1>
                 <h1 style="text-align: center;"><a href="login.php">Login Now</a></h1>
             </div>
          </div>
