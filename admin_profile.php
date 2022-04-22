@@ -30,9 +30,21 @@
 
         <main>
             <div class="middle-section">
-                <a href="admin_viewpage.php" class="logins">View</a>
 
-                <a href="admin_modify.php" class="logins">Modify</a>
+                <div style="word-wrap: break-word;">
+                <h1>Name:<br>
+                <?php echo($_SESSION['user']['name']); ?>
+                </h1>
+                <hr>
+                <h2>Email:<br>
+                <?php echo($_SESSION['user']['email']); ?>
+                </h2>
+                <hr>
+                <h2>User ID:<br>
+                <?php echo($_SESSION['user']['a_id']); ?>
+                </h2>
+                </div>
+                
             </div>
         </main>
 

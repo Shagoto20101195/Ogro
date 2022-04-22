@@ -34,7 +34,7 @@
 
         <footer>
             <div class="bottom-section">
-                <p>&copy; Unknown</p>
+                <p>&copy; <a href="admin_listpage.php" class="home-logout">Administration</a></p>
                 
                 <a href="#" class="home-logout"> Back To Top</a>
             </div>
