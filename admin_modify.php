@@ -6,63 +6,23 @@
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
         $type = $_POST['type'];
-        $id = $_POST['id'];
-        $query = "select * from seller";
-        $result = mysqli_query($connect, $query);
-        $table = "Seller Table";
 
-        if($type == "C")
+        if($type == "S")
         {
-            $table = "Customer Table";
-            $query = "select * from customer";
-            if($id != "")
-            {
-                $query .= " where c_id = '$id'";
-            }
+            header("Location: admin_modify_seller.php");
         }
-        elseif($type == "S")
+        elseif($type == "C")
         {
-            $query = "select * from seller";
-            if($id != "")
-            {
-                $query .= " where s_id = '$id'";
-            }
+            header("Location: admin_modify_customer.php");
         }
         elseif($type == "I")
         {
-            $table = "Item Table";
-            $query = "select * from item";
-            if($id != "")
-            {
-                $query .= " where item_no = '$id'";
-            }
+            header("Location: admin_modify_item.php");
         }
         elseif($type == "T")
         {
-            $table = "Purchase Table";
-            $query = "select * from purchase";
-            if($id != "")
-            {
-                $query .= " where purchase_id = '$id'";
-            }
+            header("Location: admin_modify_purchase.php");
         }
-        elseif($type == "SF")
-        {
-            $table = "Subscription Fee Table";
-            $query = "select * from subscription_fee";
-            if($id != "")
-            {
-                $query .= " where a_id = '$id'";
-            }
-        }
-
-        $result = mysqli_query($connect, $query);
-    }
-    else
-    {
-        $query = "select * from seller";
-        $result = mysqli_query($connect, $query);
-        $table = "Seller Table";
     }
 ?>
 
@@ -73,7 +33,7 @@
 
         <link rel="stylesheet" href="style.css" type="text/css">
         <link rel="icon" href="images/Tom_evil_smile.jpg">
-        <title>Ogro - <?php echo($_SESSION['user']['name']); ?></title>
+        <title>Ogro - Modify</title>
     </head>
 
     <body>
@@ -104,8 +64,7 @@
 
                     <br> <br>
 
-                    <label for="id"><h1>Unique identifier:</h1></label>
-                    <input type="text" name="id" id="id" size="100%" placeholder="Starts with A, S, C, I, T" style="padding: 10px;" required>
+                    
 
                     <br> <br>
 
@@ -114,45 +73,6 @@
                     <br>
                 </form>
 
-                <table align="center">
-                    <caption><h1><?php echo($table); ?></h1></caption>
-                    <thead>
-                        <?php
-                            $counter = 0; 
-                            while($data = mysqli_fetch_field($result))
-                            {
-                        ?>
-                            <th><?php echo($data->name); $counter++;?></th>
-                            
-                        <?php
-                            }
-                        ?>
-                    </thead>
-
-                    <tbody>
-                        <?php
-                            while($data = mysqli_fetch_array($result))
-                            {
-                                $index = 0;
-                        ?>
-
-                        <tr>
-                            <?php
-                                while($index < $counter)
-                                {
-                            ?>
-                            
-                            <td><input type="checkbox"><?php echo($data[$index]); $index++;?></td>
-                            <?php    
-                                } 
-                            ?>
-                        </tr>
-                                                
-                        <?php
-                            }
-                        ?>
-                    </tbody>
-                </table>
             </div>
         </main>
 
