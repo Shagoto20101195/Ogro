@@ -16,6 +16,11 @@
                 header("Location: admin_homepage.php");
                 die;
             }
+            else
+            {
+                $text = "No such Admin found!";
+                echo("<script type=text/javascript>alert('$text');</script>");
+            }
         }
         elseif(str_starts_with($userid, "C"))
         {
@@ -27,6 +32,11 @@
                 $_SESSION['user'] = mysqli_fetch_assoc($result);
                 header("Location: customer_homepage.php");
                 die;
+            }
+            else
+            {
+                $text = "No such Customer found!";
+                echo("<script type=text/javascript>alert('$text');</script>");
             }
         }
         elseif(str_starts_with($userid, "S"))
@@ -40,11 +50,16 @@
                 header("Location: seller_homepage.php");
                 die;
             }
+            else
+            {
+                $text = "No such Seller found!";
+                echo("<script type=text/javascript>alert('$text');</script>");
+            }
         }
         else
         {
-            echo("Invalid User!");
-            die;
+            $text = "Invalid User ID!";
+            echo("<script type=text/javascript>alert('$text');</script>");
         }
     }
 ?>
@@ -72,7 +87,7 @@
             <div class="middle-section">
                 <div>
                     <form method="post">
-                        <label for="userid"><h1>Please enter your user ID:</h1></label>
+                        <label for="userid"><h1>Please enter your user ID:<h3>(Or <a href="signup.php">signup here</a>)</h3></h1></label>
                         <input type="text" id="userid" name="userid" minlength="7" maxlength="7" size="100%" placeholder="e.g. A-12345, S-09876, C-13579" style="padding: 10px;" required>
                         <br> <br>
                         <input type="submit" class="login-button" value="Login">

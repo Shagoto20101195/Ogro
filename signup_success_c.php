@@ -29,6 +29,7 @@
                     unset($_SESSION['user']);
                 ?></h1>
                 <h1 style="text-align: center;">Please use this ID to login anytime and make sure you do not forget it!</h1>
+                <h3 style="text-align: center;">(Contact <a href="admin_listpage.php" target="_blank">admin</a> if needed)</h3>
                 <h1 style="text-align: center;"><a href="login.php">Login Now</a></h1>
             </div>
          </div>

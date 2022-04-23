@@ -25,14 +25,14 @@
 
     <main>
         <div class="middle-section">
-            <table align="center" style="width: 600px; line-height:30px; border: 2px solid black;">
+            <table align="center">
                 <caption><h1>Admin List</h1></caption>
                 
                 <thead>
                     <tr>
-                        <th style="border: 2px solid black;">ID</th>
-                        <th style="border: 2px solid black;">Name</th>
-                        <th style="border: 2px solid black;">Email</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
             
@@ -43,9 +43,9 @@
                     ?>
 
                     <tr>
-                            <td style="border: 2px solid black;"><?php echo($data['a_id']); ?></td>
-                            <td style="border: 2px solid black;"><?php echo($data['name']); ?></td>
-                            <td style="border: 2px solid black;"><?php echo($data['email']); ?></td>
+                            <td><?php echo($data['a_id']); ?></td>
+                            <td><?php echo($data['name']); ?></td>
+                            <td><?php echo($data['email']); ?></td>
                     </tr>
                     
                     <?php

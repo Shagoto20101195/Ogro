@@ -62,6 +62,33 @@
     
 }
 
+table {
+    width: 100%;
+    line-height: 100px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+thead {
+    background-color: darksalmon;
+    border: 2px solid black;
+}
+
+th {
+    border: 2px solid black;
+}
+
+td {
+    border: 2px solid black;
+    text-align: center;
+}
+
+td:hover {
+    background-color: brown;
+    color: white;
+    border: 2px solid black;
+}
+
 html {
     scroll-behavior: smooth;
 }
