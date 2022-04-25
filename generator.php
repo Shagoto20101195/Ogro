@@ -18,6 +18,10 @@
             {
                 $query = "select * from customer where c_id = '$res'";
             }
+            elseif($type == "I-")
+            {
+                $query = "select * from item where item_no = '$res'";
+            }
 
             $result = mysqli_query($connect, $query);
 
