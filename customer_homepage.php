@@ -20,6 +20,8 @@
                 <h1><abbr title="Online Agro">OGRO</abbr></h1>
                 <h3><i>Intended to serve a community of animal buyers and sellers across the country</i></h3>
                 <br> <br>
+		<h1>Welcome <?php echo($_SESSION['user']['name']);?></h1>
+		<br>
                 <span><a href="customer_homepage.php" class="home-logout">Home</a></span>
                 |
                 <span><a href="logout.php" class="home-logout">Logout</a></span>
@@ -28,7 +30,11 @@
 
         <main>
             <div class="middle-section">
-                <h1>Welcome <?php echo($_SESSION['user']['name']);?></h1>
+                
+		<br>
+		<a href="cattle_viewpage.php" class="logins">Cattle</a>
+		<a href="chicken_viewpage.php" class="logins">Chicken</a>
+                <a href="fishery_viewpage.php" class="logins">Fishery</a>
             </div>
         </main>
 
