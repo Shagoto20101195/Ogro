@@ -99,7 +99,7 @@
                         <option value="C">Customer</option>
                         <option value="T">Purchases</option>
                         <option value="I">Items</option>
-                        <option value="SF">Subscription Fee</option>
+                     <!--   <option value="SF">Subscription Fee</option> -->
                     </select>
 
                     <br> <br>

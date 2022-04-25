@@ -21,7 +21,7 @@
             $_SESSION['item'] = mysqli_fetch_assoc($result);
             header("Location: item_add_success_s.php");
         }
-        if($item == "Ck") //C = Chicken
+        elseif($item == "Ck") //C = Chicken
         {
             $id = gen_id("I-", $connect);
             $query = "insert into item values ('$id', '$name', '$s_id', 'Chicken', '$price')";
