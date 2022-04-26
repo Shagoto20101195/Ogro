@@ -23,7 +23,7 @@
         $query = "select sales_count from seller where s_id = '$s_id'";
         $result = mysqli_query($connect, $query);
         $result = mysqli_fetch_assoc($result);
-        $newCount = $result['sales_count'];
+        $newCount = $result['sales_count'] + 1;
 
         $query = "update seller set sales_count = '$newCount' where s_id = '$s_id'";
         mysqli_query($connect, $query);
