@@ -22,6 +22,10 @@
             {
                 $query = "select * from item where item_no = '$res'";
             }
+            elseif($type == "T-")
+            {
+                $query = "select * from purchase where purchase_id = '$res'";
+            }
 
             $result = mysqli_query($connect, $query);
 
